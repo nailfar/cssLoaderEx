@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title ver="<%= htmlWebpackPlugin.options.version %>" > 浪沙新零售管理平台 </title>
+  <!-- <link rel="stylesheet" href="//at.alicdn.com/t/font_655216_r8tzqrsymc102j4i.css"> -->
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_655216_9n7ibrh58uf.css">
+  <script src="//at.alicdn.com/t/font_655216_9n7ibrh58uf.js"></script>
+  <script type="text/javascript" charset="utf-8" src="//g.alicdn.com/sd/ncpc/nc.js?t=2015052012"></script>
+  <!-- <script src="https://unpkg.com/@antv/g6@2.0.4/build/g6.js"></script>
+  <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g2-3.2.7/dist/g2.min.js"></script>
+  <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.data-set-0.8.9/dist/data-set.min.js"></script> -->
+  <style>
+    #loading { background-color: #fff; height: 100%; width: 100%; position: fixed; z-index: 999; margin-top: 0px; top: 0px; left: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+    @-webkit-keyframes rotate_pacman_half_up { 0% { -webkit-transform: rotate(270deg); transform: rotate(270deg); }
+      50% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+      100% { -webkit-transform: rotate(270deg); transform: rotate(270deg); } }
+    @keyframes rotate_pacman_half_up { 0% { -webkit-transform: rotate(270deg); transform: rotate(270deg); }
+      50% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+      100% { -webkit-transform: rotate(270deg); transform: rotate(270deg); } }
+    @-webkit-keyframes rotate_pacman_half_down { 0% { -webkit-transform: rotate(90deg); transform: rotate(90deg); }
+      50% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(90deg); transform: rotate(90deg); } }
+    @keyframes rotate_pacman_half_down { 0% { -webkit-transform: rotate(90deg); transform: rotate(90deg); }
+      50% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(90deg); transform: rotate(90deg); } }
+    @-webkit-keyframes pacman-balls { 75% { opacity: 0.7; }
+      100% { -webkit-transform: translate(-100px, -6.25px); transform: translate(-100px, -6.25px); } }
+    @keyframes pacman-balls { 75% { opacity: 0.7; }
+      100% { -webkit-transform: translate(-100px, -6.25px); transform: translate(-100px, -6.25px); } }
+    .pacman { position: relative; }
+
+    .pacman > div:nth-child(2) { -webkit-animation: pacman-balls 1s 0s infinite linear; animation: pacman-balls 1s 0s infinite linear; }
+
+    .pacman > div:nth-child(3) { -webkit-animation: pacman-balls 1s 0.33s infinite linear; animation: pacman-balls 1s 0.33s infinite linear; }
+
+    .pacman > div:nth-child(4) { -webkit-animation: pacman-balls 1s 0.66s infinite linear; animation: pacman-balls 1s 0.66s infinite linear; }
+
+    .pacman > div:nth-child(5) { -webkit-animation: pacman-balls 1s 0.99s infinite linear; animation: pacman-balls 1s 0.99s infinite linear; }
+
+    .pacman > div:first-of-type { width: 0px; height: 0px; border-right: 25px solid transparent; border-top: 25px solid #279fcf; border-left: 25px solid #279fcf; border-bottom: 25px solid #279fcf; border-radius: 25px; -webkit-animation: rotate_pacman_half_up 0.5s 0s infinite; animation: rotate_pacman_half_up 0.5s 0s infinite; }
+
+    .pacman > div:nth-child(2) { width: 0px; height: 0px; border-right: 25px solid transparent; border-top: 25px solid #279fcf; border-left: 25px solid #279fcf; border-bottom: 25px solid #279fcf; border-radius: 25px; -webkit-animation: rotate_pacman_half_down 0.5s 0s infinite; animation: rotate_pacman_half_down 0.5s 0s infinite; margin-top: -50px; }
+
+    .pacman > div:nth-child(3), .pacman > div:nth-child(4), .pacman > div:nth-child(5), .pacman > div:nth-child(6) { background-color: #279fcf; width: 15px; height: 15px; border-radius: 100%; margin: 2px; width: 10px; height: 10px; position: absolute; -webkit-transform: translate(0, -6.25px); transform: translate(0, -6.25px); top: 25px; left: 100px; }
+  </style>
+  <!-- <script src="https://cdn.bootcss.com/vConsole/3.2.0/vconsole.min.js" >  </script>
+  <script>
+    var vConsole = new VConsole({});
+    console.log("hello world")
+    console.log(window.navigator.userAgent)
+  </script> -->
+</head>
+
+<body>
+  <div id="app">
+    <div id="loading">
+      <div class="loader-inner pacman">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+  <!-- 添加dll -->
+  <%= htmlWebpackPlugin.options.vendorJsName %>
+  <!-- <script src="./static/js/<%= htmlWebpackPlugin.options.vendorJsName %>"></script> -->
+  <!-- <script src="/socket.io/socket.io.js"></script> -->
+</body>
+
+</html>

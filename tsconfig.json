@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "skipDefaultLibCheck": true,
+    "jsx": "preserve",
+    "jsxFactory": "h",
+    "target": "es5",
+    "strict": false,
+    "outDir": "compile",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "pretty": true,
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["dom", "esnext", "es5", "es2015", "es6"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "downlevelIteration": true
+  },
+  "include": ["./**/*.ts", "./src/**/*.ts", "./src/**/*.tsx"]
+}
